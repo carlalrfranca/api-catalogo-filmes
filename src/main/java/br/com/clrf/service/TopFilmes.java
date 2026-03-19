@@ -1,18 +1,18 @@
 package br.com.clrf.service;
 
+import br.com.clrf.client.FilmesApi;
 import br.com.clrf.model.Filme;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
-@RequiredArgsConstructor
 @Service
-public class ListarTopFilmes {
+@RequiredArgsConstructor
+public class TopFilmes {
 
-    private final FilmesApiClient filmesApiClient;
+    private final FilmesApi filmesApi;
 
-    public List<Filme> buscarTopFilmes() {
-        return filmesApiClient.buscarTopFilmes();
+    public List<Filme> buscarTopFilmes() throws Exception {
+        return filmesApi.buscarTopFilmes();
     }
 }

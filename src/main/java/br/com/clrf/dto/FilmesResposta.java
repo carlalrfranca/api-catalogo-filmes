@@ -1,4 +1,6 @@
 package br.com.clrf.dto;
 
-public record FilmesResposta() {
-}
+import br.com.clrf.model.Filme;
+import java.util.List;
+
+public record FilmesResposta(List<Filme> data) {}
